@@ -55,8 +55,8 @@ class Camera {
 
     step();
   }
-  
-  zoomTo(target, padding = 5) {
+
+  zoomTo(target, padding = 20) {
     if (typeof target == "string") {
       target = document.querySelector(target);
     }

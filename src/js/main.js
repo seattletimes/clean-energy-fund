@@ -13,9 +13,25 @@ svg.classList.add("pre-animation");
 document.body.offsetWidth; //reflow
 svg.classList.add("ready-to-animate");
 
-var stages = require("./stages");
 var camera = new Camera(svg);
-camera.zoomTo("#CEF");
+
+var stages = {
+  "1": function() {
+    camera.zoomTo("#CEF");
+  },
+  "3": function() {
+    $("#CEF-lines line").draw();
+    var bounds = $("#CEF, #pse").getBBox(10);
+    camera.pan(bounds)
+  },
+  "4": function() {
+    var bounds = $("#sno-pud rect, #avista, #unienergy").getBBox(10);
+    camera.pan(bounds);
+  },
+  "5": function() {
+    $("#smartgrid-lines line").draw();
+  }
+};
 
 var current = 1;
 

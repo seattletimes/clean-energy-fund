@@ -12,6 +12,27 @@ Savage.prototype = {
 
   get(index) {
     return this.elements[index || 0];
+  },
+
+  getBBox(padding = 0) {
+    var bounds = this.elements[0].getBBox();
+    var right = bounds.x + bounds.width;
+    var bottom = bounds.y + bounds.height;
+    for (var i = 0; i < this.elements.length; i++) {
+      var b = this.elements[i].getBBox();
+      console.log(this.elements[i], b);
+      bounds.x = bounds.x > b.x ? b.x : bounds.x;
+      bounds.y = bounds.y > b.y ? b.y : bounds.y;
+      var w = b.x + b.width;
+      var h = b.y + b.height;
+      right = right < w ? w : right;
+      bottom = bottom < h ? h : bottom;
+    }
+    bounds.width = right - bounds.x + padding * 2;
+    bounds.height = bottom - bounds.y + padding * 2;
+    bounds.x -= padding;
+    bounds.y -= padding;
+    return bounds;
   }
 }
 
