@@ -35,6 +35,7 @@ var stages = {
 };
 
 var current = 1;
+var max = Math.max.apply(null, qsa("[data-stage]").map(el => el.getAttribute("data-stage")).map(Number));
 
 var showStage = function(stage) {
   $svg.addClass(`stage-${stage}`);
@@ -51,4 +52,8 @@ var showStage = function(stage) {
 
 showStage(current);
 
-document.querySelector("a.next").addEventListener("click", () => showStage(++current));
+document.querySelector("a.next").addEventListener("click", function() {
+  current++;
+  if (current > max) current = max;
+  showStage(current);
+});

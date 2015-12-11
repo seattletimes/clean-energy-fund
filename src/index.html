@@ -1,4 +1,13 @@
-<!doctype html>
+<%
+var stmd = require("commonmark");
+var writer = new stmd.HtmlRenderer();
+var reader = new stmd.Parser();
+
+json.CEFEthics_chatter.forEach(function(row) {
+  row.description = writer.render(reader.parse(row.description));
+})
+
+%><!doctype html>
 <html>
   <head>
     <title><%= json.project.title %></title>

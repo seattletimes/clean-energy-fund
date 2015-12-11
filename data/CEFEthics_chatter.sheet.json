@@ -1,7 +1,8 @@
 [
   {
     "stage": 1,
-    "description": "In 2013, Gov. Jay Inslee proposed a $36 million fund for clean energy projects, which was approved by the legislature in June of that year. There were four people who played important roles in this process:\n\n•Rogers Weed, former director of the state Dept. of Commerce\n\n•David Kaplan, a consultant for Commerce under Weed\n\n•Daniel Malarkey, former deputy director of Commerce\n\n•Michael Carr, former attorney at Commerce\n\nWe’ll come back to these names later, but keep them in mind.\n"
+    "date": 2013,
+    "description": "In 2013, Gov. Jay Inslee proposed a $36 million Clean Energy Fund, which was approved by the legislature in June of that year. Officials and consultants at the state Department of Commerce helped shape energy policy and the legislation, including: \n\n- Rogers Weed, former director of the state Dept. of Commerce\n- David Kaplan, a consultant for Commerce under Weed\n- Daniel Malarkey, former deputy director of Commerce\n- Michael Carr, former attorney at Commerce\n\nWe’ll come back to these names later, but keep them in mind.\n"
   },
   {
     "stage": 2,
@@ -9,18 +10,18 @@
   },
   {
     "stage": 3,
-    "description": "Four utilities bid on the smart grid grants, and three of them won—one public, and two private. Those three are:\n\n•Snohomish PUD ($7.3M)\n•Puget Sound Energy ($3.8M)\n•Avista ($3.2M)"
+    "description": "Just four utilities bid on the smart grid grants, and three of them won—one public, and two private. Those three are:\n\n- Snohomish PUD ($7.3M)\n- Puget Sound Energy ($3.8M)\n- Avista ($3.2M)"
   },
   {
     "stage": 4,
-    "description": "Of course, the real purpose of the grants is to get money to local startup companies that are working on smart grid technology. Two companies in particular will benefit from these grants: 1Energy, and UniEnergy.\n"
+    "description": "Two startup companies, Seattle software developer 1Energy and Mukilteo battery-maker UniEnergy, are key subcontractors on those utility projects."
   },
   {
     "stage": 5,
-    "description": "Remember the names from earlier? Those four people, who were responsible for drafting and awarding grants from the Clean Energy Fund, now work for these two startups, benefiting from those same grants.\n\n•David Kaplan founded 1Energy after he finished consulting for the Commerce Department.\n•Rogers Weed, who ran Commerce, works for 1Energy.\n•Daniel Malarkey, former Deputy Director for Commerce, left in 2013 and then wrote the successful grant application for SnoPUD.\n•Michael Carr, who negotiated the details of contracts with grant winners in May and July of 2014, left in August 2014 to work for UniEnergy."
+    "description": "Remember the names from earlier? Each of those four people now work for the startups benefiting from the clean energy grants.\n\n- David Kaplan founded 1Energy after he finished consulting for Commerce and developing his business with SnoPUD\n- Rogers Weed, who ran Commerce, works for 1Energy\n- Daniel Malarkey, former Deputy Director for Commerce, left in 2013 and then wrote clean-energy fund grant applications for SnoPUD and 1Energy\n- Michael Carr, who negotiated the details of contracts with grant winners finalized in July 2014, joined UniEnergy that August"
   },
   {
     "stage": 6,
-    "description": "All four workers insist that they haven’t done anything wrong, according to the state’s ethics regulations. A hearing is likely to find the same result. But it’s hard to escape the conclusion that the financial arrangements behind this funding are a little bit shady.\n"
+    "description": "All four men say they haven’t done anything wrong and are confident complaints to the state ethics board about them will be dismissed. But critics, including some legislators and a former Commerce manager, say the revolving door looks bad, even if the letter of the law was followed.\n"
   }
 ]

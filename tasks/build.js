@@ -36,6 +36,7 @@ module.exports = function(grunt) {
     var files = grunt.file.expandMapping(["**/*.html", "!**/_*.html", "!js/**/*.html"], "build", { cwd: "src" });
     var data = Object.create(grunt.data || {});
     data.t = grunt.template;
+    data.require = require;
     files.forEach(function(file) {
       var src = file.src.shift();
       grunt.verbose.writeln("Processing file: " +  src);
