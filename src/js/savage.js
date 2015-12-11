@@ -1,3 +1,5 @@
+var clone = require("./clone");
+
 var Savage = function(selector) {
   if (!(this instanceof Savage)) return new Savage(selector);
   this.elements = typeof selector == "string" ? Array.prototype.slice.call(document.querySelectorAll(selector)) : [selector];
@@ -15,12 +17,11 @@ Savage.prototype = {
   },
 
   getBBox(padding = 0) {
-    var bounds = this.elements[0].getBBox();
+    var bounds = clone(this.elements[0].getBBox());
     var right = bounds.x + bounds.width;
     var bottom = bounds.y + bounds.height;
     for (var i = 0; i < this.elements.length; i++) {
       var b = this.elements[i].getBBox();
-      console.log(this.elements[i], b);
       bounds.x = bounds.x > b.x ? b.x : bounds.x;
       bounds.y = bounds.y > b.y ? b.y : bounds.y;
       var w = b.x + b.width;

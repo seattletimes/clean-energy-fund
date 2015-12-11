@@ -1,5 +1,7 @@
 var ease = p => 0.5 - Math.cos( p * Math.PI ) / 2;
 
+var clone = require("./clone");
+
 class Camera {
   constructor(element) {
     this.element = element;
@@ -60,7 +62,7 @@ class Camera {
     if (typeof target == "string") {
       target = document.querySelector(target);
     }
-    var bounds = target.getBBox();
+    var bounds = clone(target.getBBox());
     bounds.x -= padding;
     bounds.y -= padding;
     bounds.width += padding * 2;

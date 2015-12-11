@@ -9,9 +9,10 @@ var $ = require("./savage");
 var Camera = require("./camera");
 
 var svg = document.querySelector("svg");
-svg.classList.add("pre-animation");
+var $svg = $(svg);
+$svg.addClass("pre-animation");
 document.body.offsetWidth; //reflow
-svg.classList.add("ready-to-animate");
+$svg.addClass("ready-to-animate");
 
 var camera = new Camera(svg);
 
@@ -36,7 +37,7 @@ var stages = {
 var current = 1;
 
 var showStage = function(stage) {
-  svg.classList.add(`stage-${stage}`);
+  $svg.addClass(`stage-${stage}`);
   if (stages[stage]) stages[stage]();
   qsa(".chatter").forEach(function(chatter) {
     var id = chatter.getAttribute("data-stage");
