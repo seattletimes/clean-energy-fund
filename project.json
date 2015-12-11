@@ -1,0 +1,21 @@
+{
+  "s3": {
+    "stage": {
+      "bucket": "projects-staging.seattletimes.com",
+      "path": "exogamous-wild"
+    },
+    "live": {
+      "bucket": "",
+      "path": ""
+    }
+  },
+  "title": "",
+  "description": "",
+  "url": "",
+  "slug": "",
+  "tags": [],
+  "sheets": ["1rzYM1CdrbFyDQIyqHA2KpJzI80qx1JUPivli0nH-uGI"],
+  "image": "assets/social.jpg",
+  "production": false,
+  "embedded": true
+}

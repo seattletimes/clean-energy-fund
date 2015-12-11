@@ -1,0 +1,80 @@
+@import "seattletimes";
+
+aside.flow-chart-container {
+  width: 50%;
+  float: left;
+}
+
+@infinity: 99999;
+
+svg {
+  outline: 1px solid cyan;
+
+  &.pre-animation {
+
+    #CEF-lines line,
+    #smartgrid-lines line {
+      stroke-dasharray: @infinity @infinity;
+      stroke-dashoffset: @infinity;
+    }
+
+    #CEF-smartgrid-section,
+    #avista,
+    #pse,
+    #sno-pud,
+    #_x31_energy-people,
+    #unienergy-people,
+    #_x31_energy,
+    #unienergy {
+      opacity: 0;
+    }
+  }
+
+  &.ready-to-animate {
+    #CEF-smartgrid-section,
+    #avista,
+    #pse,
+    #sno-pud,
+    #_x31_energy-people,
+    #unienergy-people,
+    #_x31_energy,
+    #unienergy {
+      transition: opacity 1s linear;
+    }
+  }
+
+  &.stage-2 {
+    #CEF-smartgrid-section {
+      opacity: 1;
+    }
+  }
+
+  &.stage-3 {
+    #avista, #pse, #sno-pud {
+      opacity: 1;
+    }
+  }
+
+  &.stage-4 {
+    #_x31_energy, #unienergy {
+      opacity: 1;
+    }
+  }
+
+  &.stage-5 {
+    #_x31_energy-people, #unienergy-people {
+      opacity: 1;
+    }
+  }
+}
+
+.descriptions {
+  width: 50%;
+  float: right;
+}
+
+.chatter {
+  &.hide {
+    display: none;
+  }
+}
