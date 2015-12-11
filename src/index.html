@@ -18,18 +18,20 @@ json.CEFEthics_chatter.forEach(function(row) {
   </head>
   <body>
 
-    <aside class="flow-chart-container">
-      <%= t.include("assets/energyfund-ethics.svg") %>
-    </aside>
+    <main class="interactive">
+      <aside class="flow-chart-container">
+        <%= t.include("assets/energyfund-ethics.svg") %>
+      </aside>
 
-    <section class="descriptions">
-      <a class="next">NEXT</a>
-      <% json.CEFEthics_chatter.forEach(function(row) { %>
-      <article class="chatter" data-stage="<%= row.stage %>">
-        <%= row.description %>
-      </article>
-      <% }) %>
-    </section>
+      <section class="descriptions">
+        <a class="next">NEXT</a>
+        <% json.CEFEthics_chatter.forEach(function(row) { %>
+        <article class="chatter" data-stage="<%= row.stage %>">
+          <%= row.description %>
+        </article>
+        <% }) %>
+      </section>
+    </main>
 
     <script src="app.js" async></script>
     <% if (json.project.production) { %>
