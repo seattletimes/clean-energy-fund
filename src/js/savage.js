@@ -40,6 +40,7 @@ Savage.prototype = {
 var mixin = {
   addClass(c) {
     var className = this.getAttribute("class") || "";
+    if (className.indexOf(c) > -1) return;
     this.setAttribute("class", className += " " + c);
   },
 

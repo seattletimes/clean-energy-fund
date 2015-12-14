@@ -5,7 +5,35 @@ var reader = new stmd.Parser();
 
 json.CEFEthics_chatter.forEach(function(row) {
   row.description = writer.render(reader.parse(row.description));
-})
+});
+
+var players = {};
+json.CEFEthics_players.forEach(function(row) {
+  players[row.name] = row;
+  row.events = [];
+});
+
+json.CEFEthics_events.forEach(function(row) {
+  var dateParts = row.date.split("/").map(Number);
+  var date = new Date(dateParts[2], dateParts[0] - 1, dateParts[1]);
+  row.date = date;
+  if (row.name == "ALL") {
+    for (var p in players) {
+      players[p].events.push(row);
+    }
+  } else if (row.name in players) {
+    players[row.name].events.push(row);
+  } else {
+    for (var p in players) {
+      if (players[p].employer == row.name) players[p].events.push(row);
+    }
+  }
+});
+
+var months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
+var formatDate = function(date) {
+  return months[date.getMonth()] + ". " + date.getDate() + ", " + date.getFullYear();
+}
 
 %><!doctype html>
 <html>
@@ -18,18 +46,41 @@ json.CEFEthics_chatter.forEach(function(row) {
   </head>
   <body>
 
-    <main class="interactive">
+    <main class="interactive" at="0">
       <aside class="flow-chart-container">
         <%= t.include("assets/energyfund-ethics.svg") %>
       </aside>
 
       <section class="descriptions">
-        <a class="next">NEXT</a>
+        <nav class="stages">
+          <a class="linear previous">&laquo; previous</a>
+          <a class="linear next">next &raquo;</a>
+        </nav>
+        <article class="chatter" data-stage="0">
+          Click on the previous/next buttons above to see how the Clean Energy Fund money was distributed. Tap on an individual for more information about that person.
+        </article>
         <% json.CEFEthics_chatter.forEach(function(row) { %>
-        <article class="chatter" data-stage="<%= row.stage %>">
+        <article class="chatter hide" data-stage="<%= row.stage %>">
           <%= row.description %>
         </article>
         <% }) %>
+      </section>
+
+      <section class="players">
+        <a class="close">&times;</a>
+        <% for (var p in players) { var player = players[p]; %>
+        <div class="player hide" data-name="<%= player.name %>">
+          <h2><%= player.name %></h2>
+          <p><b>Formerly</b>: <%= player.formerly %></p>
+          <p><b>Currently</b>: Works at <%= player.employer %></p>
+          <h3>Timeline</h3>
+          <ul class="events">
+            <% player.events.forEach(function(row) { %>
+            <li class="<%= row.name == "ALL" ? "everyone" : "personal" %>"> <%= formatDate(row.date) %>: <%= row.event %>
+            <% }) %>
+          </ul>
+        </div>
+        <% } %>
       </section>
     </main>
 

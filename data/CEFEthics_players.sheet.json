@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "name": "Rogers Weed",
+    "formerly": "Director of the state Dept. of Commerce",
+    "employer": "1Energy"
+  },
+  {
+    "name": "David Kaplan",
+    "formerly": "Consultant for Commerce under Weed, worked for SnoPUD",
+    "employer": "1Energy"
+  },
+  {
+    "name": "Daniel Malarkey",
+    "formerly": "Deputy director of Commerce",
+    "employer": "1Energy"
+  },
+  {
+    "name": "Michael Carr",
+    "formerly": "Attorney at Commerce",
+    "employer": "UniEnergy"
+  }
+]
