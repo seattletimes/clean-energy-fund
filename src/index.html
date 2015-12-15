@@ -30,11 +30,6 @@ json.CEFEthics_events.forEach(function(row) {
   }
 });
 
-var months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
-var formatDate = function(date) {
-  return months[date.getMonth()] + ". " + date.getDate() + ", " + date.getFullYear();
-}
-
 %><!doctype html>
 <html>
   <head>
@@ -46,46 +41,51 @@ var formatDate = function(date) {
   </head>
   <body>
 
-    <main class="interactive" at="0">
-      <aside class="flow-chart-container">
-        <%= t.include("assets/energyfund-ethics.svg") %>
-      </aside>
+    <responsive-child>
 
-      <section class="descriptions">
-        <nav class="stages">
-          <a class="linear previous">&laquo; previous</a>
-          <a class="linear next">next &raquo;</a>
-        </nav>
-        <article class="chatter" data-stage="0">
-          Click on the previous/next buttons above to see how the Clean Energy Fund money was distributed. Tap on an individual for more information about that person.
-        </article>
-        <% json.CEFEthics_chatter.forEach(function(row) { %>
-        <article class="chatter hide" data-stage="<%= row.stage %>">
-          <%= row.description %>
-        </article>
-        <% }) %>
-      </section>
+      <main class="interactive" at="0">
+        <aside class="flow-chart-container">
+          <%= t.include("assets/energyfund-ethics.svg") %>
+        </aside>
 
-      <section class="players">
-        <a class="close">&times;</a>
-        <% for (var p in players) { var player = players[p]; %>
-        <div class="player hide" data-name="<%= player.name %>">
-          <img class="mug" src="./assets/<%= player.name.replace(" ", "") %>.jpg">
-          <h2><%= player.name %></h2>
-          <p><b>Formerly</b>: <%= player.formerly %></p>
-          <p><b>Currently</b>: Works at <%= player.employer %></p>
-          <h3>Timeline</h3>
-          <ul class="events">
-            <% player.events.forEach(function(row) { %>
-            <li class="<%= row.name != player.name ? "everyone" : "personal" %>"> <%= row.dateText %>: <%= row.event %>
-            <% }) %>
-          </ul>
-          <p class="explanation">
-            Only events in bold were the result of direct action by <%= player.name.split(" ").pop() %>.
-        </div>
-        <% } %>
-      </section>
-    </main>
+        <section class="descriptions">
+          <nav class="stages">
+            <a class="linear previous">&laquo; previous</a>
+            <a class="linear next">next &raquo;</a>
+          </nav>
+          <article class="chatter" data-stage="0">
+            Click on the previous/next buttons above to see how the Clean Energy Fund money was distributed. Tap on an individual for more information about that person.
+          </article>
+          <% json.CEFEthics_chatter.forEach(function(row) { %>
+          <article class="chatter hide" data-stage="<%= row.stage %>">
+            <%= row.description %>
+          </article>
+          <% }) %>
+        </section>
+
+        <section class="players">
+          <a class="close">&times;</a>
+          <% for (var p in players) { var player = players[p]; %>
+          <div class="player hide" data-name="<%= player.name %>">
+            <img class="mug" src="./assets/<%= player.name.replace(" ", "") %>.jpg">
+            <h2><%= player.name %></h2>
+            <p><b>Formerly</b>: <%= player.formerly %></p>
+            <p><b>Currently</b>: Works at <%= player.employer %></p>
+            <h3>Timeline</h3>
+            <ul class="events">
+              <% player.events.forEach(function(row) { %>
+              <li class="<%= row.name != player.name ? "everyone" : "personal" %>"> <%= row.dateText %>: <%= row.event %>
+              <% }) %>
+            </ul>
+            <p class="explanation">
+              Only events in bold were the result of direct action by <%= player.name.split(" ").pop() %>.
+          </div>
+          <% } %>
+        </section>
+      </main>
+      <p class="credit">Thomas Wilburn and Garland Potts / The Seattle Times</p>
+
+    </responsive-child>
 
     <script src="app.js" async></script>
     <% if (json.project.production) { %>
