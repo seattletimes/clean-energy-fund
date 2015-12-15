@@ -80,6 +80,8 @@ var formatDate = function(date) {
             <li class="<%= row.name != player.name ? "everyone" : "personal" %>"> <%= row.dateText %>: <%= row.event %>
             <% }) %>
           </ul>
+          <p class="explanation">
+            Only events in bold were the result of direct action by <%= player.name.split(" ").pop() %>.
         </div>
         <% } %>
       </section>
