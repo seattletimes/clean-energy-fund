@@ -70,13 +70,14 @@ var formatDate = function(date) {
         <a class="close">&times;</a>
         <% for (var p in players) { var player = players[p]; %>
         <div class="player hide" data-name="<%= player.name %>">
+          <img class="mug" src="./assets/<%= player.name.replace(" ", "") %>.jpg">
           <h2><%= player.name %></h2>
           <p><b>Formerly</b>: <%= player.formerly %></p>
           <p><b>Currently</b>: Works at <%= player.employer %></p>
           <h3>Timeline</h3>
           <ul class="events">
             <% player.events.forEach(function(row) { %>
-            <li class="<%= row.name == "ALL" ? "everyone" : "personal" %>"> <%= formatDate(row.date) %>: <%= row.event %>
+            <li class="<%= row.name != player.name ? "everyone" : "personal" %>"> <%= row.dateText %>: <%= row.event %>
             <% }) %>
           </ul>
         </div>

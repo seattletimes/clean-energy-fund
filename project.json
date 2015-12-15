@@ -16,6 +16,6 @@
   "tags": [],
   "sheets": ["1rzYM1CdrbFyDQIyqHA2KpJzI80qx1JUPivli0nH-uGI"],
   "image": "assets/social.jpg",
-  "production": false,
+  "production": true,
   "embedded": true
 }

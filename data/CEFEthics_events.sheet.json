@@ -2,101 +2,121 @@
   {
     "name": "Rogers Weed",
     "event": "Starts as director of WA Dept. of Commerce",
-    "date": "3/17/2009"
+    "date": "3/17/2009",
+    "dateText": "Mar. 17, 2009"
   },
   {
     "name": "David Kaplan",
     "event": "Hired as consultant at Commerce",
-    "date": "4/4/2009"
+    "date": "4/4/2009",
+    "dateText": "Apr. 4, 2009"
   },
   {
     "name": "Daniel Malarkey",
     "event": "Starts as deputy director at Commerce",
-    "date": "8/31/2009"
+    "date": "8/31/2009",
+    "dateText": "Aug. 31, 2009"
   },
   {
     "name": "David Kaplan",
     "event": "Writes draft state energy plan including support for smart-grid and battery technology",
-    "date": "9/1/2009"
+    "date": "9/1/2009",
+    "dateText": "Sep. 1, 2009"
   },
   {
     "name": "David Kaplan",
     "event": "Hired by Snohomish County PUD advising general manager",
-    "date": "2/1/2010"
+    "date": "2/1/2010",
+    "dateText": "Feb. 1, 2009"
   },
   {
     "name": "David Kaplan",
     "event": "Commerce contract ends",
-    "date": "3/3/2010"
+    "date": "3/3/2010",
+    "dateText": "Mar. 3, 2010"
   },
   {
     "name": "David Kaplan",
     "event": "Files initial business registration for 1Energy",
-    "date": "8/11/2010"
+    "date": "8/11/2010",
+    "dateText": "Aug. 11, 2010"
   },
   {
     "name": "Michael Carr",
     "event": "Starts at Commerce",
-    "date": "5/1/2011"
+    "date": "5/1/2011",
+    "dateText": "May 1, 2011"
   },
   {
     "name": "David Kaplan",
     "event": "Leaves SnoPUD to concentrate on 1Energy",
-    "date": "8/29/2011"
+    "date": "8/29/2011",
+    "dateText": "Aug. 29, 2011"
   },
   {
     "name": "1Energy",
     "event": "Snohomish County PUD gives $800,000 no-bid contract to 1Energy",
-    "date": "9/16/2011"
+    "date": "9/16/2011",
+    "dateText": "Sep. 16, 2011"
   },
   {
     "name": "UniEnergy",
     "event": "UniEnergy business registration",
-    "date": "3/12/2012"
+    "date": "3/12/2012",
+    "dateText": "Mar. 12, 2012"
   },
   {
     "name": "ALL",
     "event": "Gov. Jay Inslee inaugurated. Creation of new fund to promote clean energy is early priority",
-    "date": "1/16/2013"
+    "date": "1/16/2013",
+    "dateText": "Jan. 16, 2013"
   },
   {
     "name": "Rogers Weed",
     "event": "Leaves Commerce, later joins 1Energy",
-    "date": "2/2/2013"
+    "date": "2/2/2013",
+    "dateText": "Feb. 2, 2013"
   },
   {
     "name": "David Kaplan",
     "event": "Among small group of clean tech insiders invited to energy-fund meeting in Inslee's office",
-    "date": "3/27/2013"
+    "date": "3/27/2013",
+    "dateText": "Mar. 27, 2013"
   },
   {
     "name": "ALL",
     "event": "$36 million Clean Energy Fund signed into law as part of capital budget",
-    "date": "7/1/2013"
+    "date": "7/1/2013",
+    "dateText": "July 1, 2013"
   },
   {
     "name": "Daniel Malarkey",
     "event": "Leaves Commerce, joins 1Energy and writes smart-grid grant applications",
-    "date": "9/7/2013"
+    "date": "9/7/2013",
+    "dateText": "Sep. 7, 2013"
   },
   {
     "name": "ALL",
     "event": "Three utilities announced as smart-grid grant winners, all three projects involve 1Energy or UniEnergy as subcontractors",
-    "date": "3/14/2014"
+    "date": "3/14/2014",
+    "dateText": "Mar. 14, 2014"
   },
   {
     "name": "Michael Carr",
     "event": "Negotiates grant contract details with utilities that won smart-grid grants, starting in March 2013",
-    "date": "7/1/2014"
+    "date": "7/1/2014",
+    "dateText": "July 1, 2014"
   },
   {
     "name": "UniEnergy",
     "event": "Inslee announces final smart-grid grant deals in event at UniEnergy",
-    "date": "7/8/2014"
+    "date": "7/8/2014",
+    "dateText": "July 8, 2014"
   },
   {
     "name": "Michael Carr",
     "event": "Joins UniEnergy",
-    "date": "8/15/2014"
+    "date": "8/15/2014",
+    "dateText": "August 2014"
   }
 ]
